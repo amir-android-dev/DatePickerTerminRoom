@@ -143,7 +143,6 @@ class MainActivity : AppCompatActivity() {
         binding.etDate.setOnClickListener {
             dateSet(binding.etDate)
         }
-        
         lifecycleScope.launch {
             daoTerm.fetchTermById(id).collect {
                 binding.etTerm.setText(it.term)
